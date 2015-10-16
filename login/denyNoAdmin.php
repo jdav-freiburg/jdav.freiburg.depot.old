@@ -1,5 +1,4 @@
 <?php
-    require "../utils/functions.php";
     require "startSession.php";
     $userIsAdmin = userIsAdmin($user);
     if (!$userIsAdmin) {

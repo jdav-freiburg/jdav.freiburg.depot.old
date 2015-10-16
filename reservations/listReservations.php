@@ -1,12 +1,11 @@
 <?php
     require "../login/denyNoAdmin.php";
+    $page_title = "JDAV Freiburg - Depot - alle Reservierungen";
+    require "../global-layout/header.php";
     if ($userIsAdmin) {
-        require "../global-layout/header.php";
 ?>
-<header>
-     <h1>Reservierungs&uuml;bersicht</h1>
-</header>
-<content>
+<main>
+    <h1>Reservierungs&uuml;bersicht</h1>
     <?php
         $sql="
             SELECT u.uname, u.uschlussel, u.ugruppe, u.umail, r.rnr, r.rdatumvon, r.rdatumbis, r.rziel, r.rbemerkung
@@ -64,8 +63,5 @@
                 ";
         }
     ?>
-</content>
-<?php
-    require "../global-layout/footer.php";
-    }  // end of login if
-?>
+</main>
+<?php } require "../global-layout/footer.php"; ?>

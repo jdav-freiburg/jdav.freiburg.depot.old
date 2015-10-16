@@ -18,7 +18,7 @@ nytprof.out
 *.o
 *.bs
 /_eumm/
-config.inc
+_configs.php
 .idea
 *.sql
 tmp

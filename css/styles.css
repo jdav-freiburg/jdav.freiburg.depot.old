@@ -1,11 +1,14 @@
 @import url("normalize.css");
 
 header,
+main,
 footer {
-    margin: 2.5%;
+    padding: 2.5%;
+    width: 95%;
 }
+header,
 footer {
-    float: left;
+    background-color: olive;
 }
 
 .reservation {
