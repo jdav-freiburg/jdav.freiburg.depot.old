@@ -33,6 +33,7 @@
        <a href="admin_artikel.php">Artikel verwalten</a><br>
        <a href="admin_neu.php">Artikel hinzuf&uuml;gen</a><br>
        <br><a href="admin_liste.php">Artikelliste</a> <br>
+       <br><a href="reservations/listReservations.php">alle Reservierungen</a> <br>
        <br><a href="admin_reservierung.php">Reservierungen verwalten</a><br>
        <br><a href="admin_userauswahlen.php">User verwalten</a> <br>
        </tr>
