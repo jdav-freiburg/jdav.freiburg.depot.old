@@ -8,11 +8,10 @@
            $result=mysql_query($sql) OR die("Es ist folgender Fehler aufgetreten: ".mysql_error());
            $check=mysql_fetch_assoc($result);
 
-     if (!$_SESSION['eingeloggt'] and $check['status']!=1)
+     if (!$_SESSION['eingeloggt'] or $check['ustatus']!=1)
 
      {
       echo "<link rel=stylesheet type=text/css href=format.css>
-      <p>$check</p>
       <h2> Du bist nicht eingeloggt! <a href=login.php>Bitte einloggen</a>";
      }
      else {
