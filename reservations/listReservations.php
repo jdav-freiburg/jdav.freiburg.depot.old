@@ -1,8 +1,7 @@
 <?php
     require "../login/denyNoAdmin.php";
     if ($userIsAdmin) {
-        // user is valid login, showing content
-        require ../global-layout/header.php;
+        require "../global-layout/header.php";
 ?>
 <header>
      <h1>Reservierungs&uuml;bersicht</h1>
@@ -67,6 +66,6 @@
     ?>
 </content>
 <?php
-    require ../global-layout/footer.php;
+    require "../global-layout/footer.php";
     }  // end of login if
 ?>
