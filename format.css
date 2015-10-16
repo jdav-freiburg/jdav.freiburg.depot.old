@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+}
+h4	{font-family:Verdana,Helvetica,Arial;
+    	font-size:10pt;
+	font-weight:bold;
+	color:#505050}
+b	{font-family:Verdana,Helvetica,Arial;
+	font-weight:bold;
+	font-size:10pt;
+	color:#000000}
+p, br, table, td, font    {font-family:Verdana,Helvetica,Arial;
+    	font-size:10pt;
+	font-weight:bold;
+	color:#505050}
+h1	{font-family:Verdana,Helvetica,Arial;
+	font-size:13pt;
+	color:#000000 ;
+	font-weight:bold}
+h2	{font-family:Verdana,Helvetica,Arial;
+	font-size:10pt;
+	color:#F14B43;
+        font-weight:bold}
+h3	{font-family:Verdana,Helvetica,Arial;
+	font-size:10;
+	color:#33CC33;
+	font-weight:bold} 
+h5	{font-family:Verdana,Helvetica,Arial;
+	font-size:8pt;
+	color:#505050;
+	font-weight:bold}
+a:link 	{color:black;
+	font-family:Verdana,Helvetica,Arial; 
+	font-size:10pt;
+	font-weight:bold;
+	text-decoration:hover;}
+a:visited 	{font-family:Verdana,Helvetica,Arial;
+	color:black; 
+	font-size:10pt;
+	font-weight:bold;
+	text-decoration:hover;}
+a:active 	{font-family:Verdana,Helvetica,Arial;
+	color:#ff7600; 
+	text-decoration:hover;
+	font-size:10pt;
+	font-weight:bold}
+
+.formHeader {
+	background-color: white;
+	border-bottom: 1px solid black;
+	height: 220px;
+	position: fixed;
+	width: 100%;
+	top: 0;
+}
+.formSubmit {
+	background-color: rgb(87, 176, 101);
+	float: right;
+	padding: 20px;
+	margin-right: 10px;
+	margin-top: -24px;
+}
+.formArticles {
+	margin-top: 220px;
+}
