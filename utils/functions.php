@@ -13,10 +13,23 @@
 
     function userIsAdmin($user) {
         if (!$_SESSION['eingeloggt'] or $user['urechte'] != 1) {
-            echo getHTMLContent("../error/not-logged-in.html");
+            require "../error/not-logged-in.php";
             return FALSE;
         } else {
             return TRUE;
+        }
+    }
+
+    function message($log) {
+        echo "<p>$log</p>";
+    }
+
+    function js_console($log) {
+        if ($log) {
+            if (is_array($log)) {
+                $log = implode(',', $log);
+            }
+            echo "<script>console.log('$log');</script>";
         }
     }
 

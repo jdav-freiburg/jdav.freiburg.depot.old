@@ -1,5 +1,12 @@
 @import url("normalize.css");
 
+/* http://www.colorcombos.com/color-scheme-420.html */
+/* http://www.colorcombos.com/color-scheme-430.html */
+
+a {
+    color: white;
+}
+
 header,
 main,
 footer {
@@ -8,11 +15,30 @@ footer {
 }
 header,
 footer {
-    background-color: olive;
+    background-color: #192823;
+}
+header {
+    color: #D0C6B1;
+}
+nav {
+    background-color: #397249;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+}
+nav a {
+    display: block;
+    padding: .8em .25em;
+    text-decoration: none;
+}
+nav a:hover {
+    background-color: #D0C6B1;
+    color: #192823;
 }
 
 .reservation {
-    border: 2px solid darkolivegreen;
+    border: 2px solid #06A2CB;
     margin: 10px 2.5%;
     padding: 5px;
     width: 800px;

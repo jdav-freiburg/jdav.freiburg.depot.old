@@ -1,4 +1,5 @@
 <?php
+    require "_configs.php";
     $page_title = "JDAV Freiburg - Startseite";
     require "global-layout/header.php";
 ?>
@@ -33,11 +34,6 @@
     gez. Jugendreferat
 
     <h1>Mit dem Login akzeptierst du die Regelungen unseres Materialdepots</h1>
-    <form method="post" action="login">
-        <input name="lusername"> Username<br>
-        <input name="lpw" type="password"> Passwort <br>
-        <input type="submit" value="Einloggen">  </h4> </tr>
-        <a href="anmelden.php">Wenn du noch nicht registriert bist kannst du dich hier kostenlos registrieren!</a>
-        <a href="hilfe.php">Hilfe</a>
-   </form>
+    <?php require "login/loginForm.php"; ?>
+</main>
 <?php require "global-layout/footer.php"; ?>
