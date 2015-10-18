@@ -1,7 +1,4 @@
 <?php
-    require "../_configs.php";
+    message("Du bist nicht eingeloggt.");
+    require "../login/loginForm.php";
 ?>
-<content>
-    <h1>Du bist nicht eingeloggt!</h1>
-    <a href="<?php echo $webroot; ?>/login.php">Bitte einloggen</a>
-</content>

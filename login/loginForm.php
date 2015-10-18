@@ -1,7 +1,16 @@
-<form method="post" action="<?php echo $webroot; ?>/login.php">
-    <input name="lusername"> Username
-    <input name="lpw" type="password"> Passwort
-    <input type="submit" value="Einloggen">
-    <a href="<?php echo $webroot; ?>/anmelden.php">Wenn du noch nicht registriert bist kannst du dich hier kostenlos registrieren!</a>
-    <a href="<?php echo $webroot; ?>/hilfe.php">Hilfe</a>
-</form>
+<section class="login">
+    <form method="post" action="<?php echo $webroot; ?>/">
+        <section>
+            <legend>Benutzer</legend>
+            <input name="lusername" required autofocus/>
+        </section>
+        <section>
+            <legend>Passwort</legend>
+            <input name="lpw" type="password" required/>
+        </section>
+        <section class="register">
+            <a href="<?php echo $webroot; ?>/anmelden.php">Registrieren.</a>
+        </section>
+        <input type="submit" value="Einloggen">
+    </form>
+</section>

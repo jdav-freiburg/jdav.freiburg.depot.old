@@ -14,10 +14,10 @@
 
      <table align="center"  width="90%" >
          <tr bgcolor="#57b065"><h1> Neu registrieren </h1></tr>
-         <tr><h1>Hier kannst du dich kostenlos anmelden, um Ausrüstung reservieren zu können.
+         <tr><h1>Hier kannst du dich kostenlos anmelden, um Ausrï¿½stung reservieren zu kï¿½nnen.
          
-                 <h4> Deine Daten werden zuerst durch einen Administrator geprüft.
-                 Erst nachdem er den Account freigeschaltet hat, kannst du Ausrüstung reservieren.
+                 <h4> Deine Daten werden zuerst durch einen Administrator geprï¿½ft.
+                 Erst nachdem er den Account freigeschaltet hat, kannst du Ausrï¿½stung reservieren.
      </table>
      <table align="center"  width="90%" >
      <form method="post" action="anmeldebestatigung.php">
@@ -36,8 +36,8 @@
              <tr bgcolor=#80FF80>Verantwortlich:    </tr>
              <tr bgcolor=#FFFFFF><br><input name="uschlussel" >
                    Trage hier den Namen der Person ein, die in deiner
-                   Gruppe für die Ausrüstung verantwortlich ist und dir
-                   die Ausrüstung aushändigt.
+                   Gruppe fï¿½r die Ausrï¿½stung verantwortlich ist und dir
+                   die Ausrï¿½stung aushï¿½ndigt.
              <br> <br></tr>
 
               <tr bgcolor=#80FF80>Mailadresse:    </tr>
@@ -54,8 +54,8 @@
                    <tr bgcolor=#80FF80><br><input type="submit" value="Anmelden">   </h4>
          </form></table>
      <table align="center"  width="90%" >
-         <tr bgcolor="#57b065"><a href="start.php">
-                               Zurück zum Login</a></tr>
+         <tr bgcolor="#57b065"><a href="messages.php">
+                               Zurï¿½ck zum Login</a></tr>
          <tr bgcolor="#57b065"><a href="hilfe.php">
                                Hilfe</a></tr>
      <table>

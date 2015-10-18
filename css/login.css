@@ -1,0 +1,23 @@
+.login {
+    background-color: #fff;
+    border: 1px solid #D0C6B1;
+    border-top: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    margin-left: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+.login .register {
+    float: right;
+}
+.login input {
+    margin-top: .5em;
+}
+.login legend,
+.login .register,
+.login input[type=submit] {
+    margin-top: 1em;
+}
+.login section:first-child legend {
+    margin-top: 0;
+}

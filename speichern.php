@@ -2,7 +2,7 @@
  require "config.inc";
  connect();
  
-    // Ab hier nach jedes connect einfügen
+    // Ab hier nach jedes connect einfï¿½gen
      session_start();
      $sql="SELECT ustatus,urechte FROM $tab_user WHERE uname='$_SESSION[username]'";
            $result=mysql_query($sql) OR die("Es ist folgender Fehler aufgetreten: ".mysql_error());
@@ -61,7 +61,7 @@
    <form method="post">
      <table align="center"  width="90%" >
          <tr bgcolor="#57b065"><h1> Reservierung wurde gespeichert </h1></tr>
-         <tr><h1>Hier noch einmal deine Reservierungsdaten. Diese Seite musst du ausdrucken und wenn du die Sachen aus den Schränken holst im Ordner abheften!
+         <tr><h1>Hier noch einmal deine Reservierungsdaten. Diese Seite musst du ausdrucken und wenn du die Sachen aus den Schrï¿½nken holst im Ordner abheften!
                  </h1><h4>  </tr>
          <tr><td> Username:  </td><td><?php echo $_SESSION['username'];//ersetze potzi durch $_SESSIONusername ?></td></tr>
          <tr><td> Reservierungsnummer:  </td><td><?php echo "$rnr";  ?></td></tr>
@@ -70,7 +70,7 @@
          <tr><td> Art:  </td><td><?php echo"$_POST[ort]";  ?></td></tr>
          <tr><td> Bemerkung:  </td><td><?php echo"$_POST[bemerkung]";  ?></td></tr>
          <tr> </tr>
-         <tr bgcolor=#80FF80><td> Reservierte Ausrüstung</td><td></td></table>
+         <tr bgcolor=#80FF80><td> Reservierte Ausrï¿½stung</td><td></td></table>
 
          <table align="center"  width="90%">
 
@@ -87,11 +87,9 @@
 
            $text= "Neue Reservierung
                         Neue Reservierung: Nr. $rnr
-                        durch Username: $_SESSION[username]
-
-                        Kontrolle unter www.jdav-freiburg.de/depot/uebersicht.php";
-                if ($email_admin1){
-                   mail($email_admin1,"Neue Reservierung",$text);
+                        durch Username: $_SESSION[username]";
+                if ($email_admin){
+                   mail($email_admin,"Neue Reservierung",$text);
                 }
                 if ($email_admin2){
                    mail($email_admin2,"Neue Reservierung",$text);
@@ -102,8 +100,8 @@
            ?>
      </table>
      <table align="center"  width="90%" >
-         <tr bgcolor="#57b065"><a href="start.php">
-                               Zurück zur Startseite</a></tr>
+         <tr bgcolor="#57b065"><a href="messages.php">
+                               Zurï¿½ck zur Startseite</a></tr>
          <tr bgcolor="#57b065"><a href="hilfe.php">
                                <br>Hilfe</a></tr>
      <table>

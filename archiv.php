@@ -3,7 +3,7 @@
  connect();
 
 
-                          // Ab hier nach jedes connect einfügen
+                          // Ab hier nach jedes connect einfï¿½gen
      session_start();
      $sql="SELECT ustatus,urechte FROM $tab_user WHERE uname='$_SESSION[username]'";
            $result=mysql_query($sql) OR die("Es ist folgender Fehler aufgetreten: ".mysql_error());
@@ -55,8 +55,8 @@
 
                       </tr>
 
-         <tr bgcolor="#57b065"><a href="start.php">
-                               Zurück zur Startseite</a></tr>
+         <tr bgcolor="#57b065"><a href="messages.php">
+                               Zurï¿½ck zur Startseite</a></tr>
          <tr bgcolor="#57b065"><a href="hilfe.php">
                                Hilfe</a></tr>
      <table>

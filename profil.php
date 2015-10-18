@@ -2,7 +2,7 @@
  require "config.inc";
  connect();
  
-        // Ab hier nach jedes connect einfügen
+        // Ab hier nach jedes connect einfï¿½gen
      session_start();
      $sql="SELECT ustatus,urechte FROM $tab_user WHERE uname='$_SESSION[username]'";
            $result=mysql_query($sql) OR die("Es ist folgender Fehler aufgetreten: ".mysql_error());
@@ -29,7 +29,7 @@
 
  $result = mysql_query($sql);
  if ($result){
-  echo "<table align=center  width=90% ><h2> Die Userdaten wurden erfolgreich geändert</table>";
+  echo "<table align=center  width=90% ><h2> Die Userdaten wurden erfolgreich geï¿½ndert</table>";
  }
  
 ?>
@@ -44,8 +44,8 @@
 
      <table align="center"  width="90%" >
          <tr bgcolor="#57b065"><h1> User bearbeiten </h1></tr>
-         <tr><h1>Hier kannst du Userdaten verändern! Aber
-                 nicht ohne Rücksprache mit dem jeweiligen User!
+         <tr><h1>Hier kannst du Userdaten verï¿½ndern! Aber
+                 nicht ohne Rï¿½cksprache mit dem jeweiligen User!
                 <h4>
      </table>
      <table align="center"  width="90%" >
@@ -61,7 +61,7 @@
              <tr bgcolor=#80FF80>Username:    </tr>
              <input name="unr" type="hidden" value="<?php echo$userdaten[0]?>" >
              <tr bgcolor=#FFFFFF><br><input name="username" value="<?php echo$userdaten[1]?>">
-                   Hier kannst du deinen Usernamen ändern
+                   Hier kannst du deinen Usernamen ï¿½ndern
              <br> <br></tr>
 
              <tr bgcolor=#80FF80>User ist Mitglied in dieser Gruppe:    </tr>
@@ -71,7 +71,7 @@
              
              <tr bgcolor=#80FF80>Verantwortlich:    </tr>
              <tr bgcolor=#FFFFFF><br><input name="uschlussel" value="<?php echo$userdaten[3]?>">
-                   Diese Person ist für die Materialausgabe verantwortlich und besitzt einen Schlüssel
+                   Diese Person ist fï¿½r die Materialausgabe verantwortlich und besitzt einen Schlï¿½ssel
              <br> <br></tr>
 
               <tr bgcolor=#80FF80>Mailadresse:    </tr>
@@ -82,13 +82,13 @@
              
              <tr bgcolor=#80FF80>Passwort:    </tr>
              <tr bgcolor=#FFFFFF><br><input name="upw" type="password" value="<?php echo$userdaten[7]?>">
-                   Hier kannst du dein Userpasswort ändern.
+                   Hier kannst du dein Userpasswort ï¿½ndern.
              <br> <br></tr>
-                   <tr bgcolor=#80FF80><br><input type="submit" value="Userdaten ändern">   </h4>
+                   <tr bgcolor=#80FF80><br><input type="submit" value="Userdaten ï¿½ndern">   </h4>
          </form></table>
      <table align="center"  width="90%" >
-         <tr bgcolor="#57b065"><a href="start.php">
-                               Zurück zur Startseite</a></tr>
+         <tr bgcolor="#57b065"><a href="messages.php">
+                               Zurï¿½ck zur Startseite</a></tr>
          <tr bgcolor="#57b065"><a href="hilfe.php">
                                Hilfe</a></tr>
      <table>

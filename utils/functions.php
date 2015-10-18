@@ -21,13 +21,23 @@
     }
 
     function message($log) {
-        echo "<p>$log</p>";
+        if ($log) {
+            if (is_array($log)) {
+                for ($i = 0; $i < count($log); $i++) {
+                    echo "<aside class='log'>$log[$i]</aside>";
+                }
+            } else {
+                echo "<aside class='log'>$log</aside>";
+            }
+        }
     }
 
     function js_console($log) {
         if ($log) {
             if (is_array($log)) {
-                $log = implode(',', $log);
+                for ($i = 0; $i < count($log); $i++) {
+                    echo "<script>console.log('$log[$i]');</script>";
+                }
             }
             echo "<script>console.log('$log');</script>";
         }

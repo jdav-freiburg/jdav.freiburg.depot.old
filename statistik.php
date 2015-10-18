@@ -1,7 +1,7 @@
 <?php
  require "config.inc";
  connect();
-                  // Ab hier nach jedes connect einfügen
+                  // Ab hier nach jedes connect einfï¿½gen
      session_start();
      $sql="SELECT ustatus,urechte FROM $tab_user WHERE uname='$_SESSION[username]'";
            $result=mysql_query($sql) OR die("Es ist folgender Fehler aufgetreten: ".mysql_error());
@@ -27,7 +27,7 @@
 
      <table align="center"  width="90%" >
          <tr bgcolor="#57b065"><h1> Statistik </h1></tr>
-         <tr><h1>Hier siehst du ein paar Statistiken über diese Seite</h1><h4>
+         <tr><h1>Hier siehst du ein paar Statistiken ï¿½ber diese Seite</h1><h4>
      </table>
      <table align="center"  width="80%" >
        <?php
@@ -119,8 +119,8 @@
          </table> <br>
      <table align="center"  width="90%" >
 
-         <tr bgcolor="#57b065"><a href="start.php">
-                               Zurück zur Startseite</a></tr>
+         <tr bgcolor="#57b065"><a href="messages.php">
+                               Zurï¿½ck zur Startseite</a></tr>
          <tr bgcolor="#57b065"><a href="hilfe.php">
                                Hilfe</a></tr>
      <table>

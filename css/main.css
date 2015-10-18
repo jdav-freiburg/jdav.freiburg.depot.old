@@ -1,5 +1,7 @@
 main {
-    height: calc(100% - 85px - 50px);
-    padding: 0 1em;
+    padding: 1em;
     overflow: auto;
+}
+main h1:first-child {
+    margin-top: 0;
 }

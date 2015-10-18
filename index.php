@@ -1,39 +1,48 @@
 <?php
+    session_start();
     require "_configs.php";
-    $page_title = "JDAV Freiburg - Startseite";
-    require "global-layout/header.php";
+    $page_title = "Startseite";
+    require "templates/header.php";
+
+    require "utils/functions.php";
+    connectDatabase($dbServer, $dbUser, $dbPassword, $dbName);
+
+    $loginSubmitted = $_POST["lusername"];
+
+    if ($loginSubmitted) {
+        $_SESSION["username"] = $_POST["lusername"];
+        $_SESSION["userpw"] = $_POST["lpw"];
+
+        $user = $_REQUEST["lusername"];
+        $pass = $_REQUEST["lpw"];
+
+        $sql = "SELECT unr, upw, ustatus, urechte FROM $tab_user WHERE uname = '$user'";
+        $result = mysql_query($sql) OR die("Es ist folgender Fehler aufgetreten: " . mysql_error());
+        $check = mysql_num_rows($result);
+
+        if ($check < 1) {
+            $messages[] = "Der Benutzer ist nicht vorhanden.";
+        } else {
+            $wert = mysql_fetch_assoc($result);
+            $passwort = $wert['upw'];
+        }
+    }
+
+    if ($loginSubmitted and ($pass != $passwort or !isset($wert))) {
+        $messages[] = "Das Passwort ist falsch.";
+        session_destroy();
+    } else if ($loginSubmitted) {
+        $_SESSION['eingeloggt'] = TRUE;
+        $_SESSION['usernr'] = $wert['unr'];
+        $_SESSION['userrechte'] = $wert['urechte'];
+    }
+
+    if (!$_SESSION['eingeloggt']) {
+        require "login/loginForm.php";
+    }
+
+    message($messages);
+
+    require "templates/rules.php";
+    require "templates/footer.php";
 ?>
-
-<main>
-    <h1> Depot-Regeln</h1></tr>
-
-    Alle JugendleiterInnen und Mitglieder der Jugendgruppen können sich Ausrüstung bei uns kostenlos ausleihen.
-    Der Materialverleih läuft auf Vertrauensbasis, weshalb sich alle an diese Regeln halten müssen!!
-    <ol>
-        <li>Ausleihen können alle Mitglieder der JDAV Freiburg nach Absprache mit ihren zuständigen LeiterInnen.</li>
-
-        <li>Jugendgruppen haben immer Vorrang vor Einzelpersonen.</li>
-
-        <li>Jeder richtet sich ein Konto bei der Online-Reservierung ein, trägt sich
-            <a href="http://ml01.ispgateway.de/mailman/listinfo/depot_jdav-freiburg.de">hier</a> in den Verteiler
-            <a href="http://ml01.ispgateway.de/mailman/listinfo/depot_jdav-freiburg.de">depot-at-jdav-freiburg.de</a>
-            und in die Ausleiher-Innenkartei ein!</li>
-
-        <li>Alle ausgeliehenen Sachen müssen zuerst hier im Internet reserviert werden.
-            <b>Achtung: Neu: Die Reservierung wird ausgedruckt und beim Ausleihen in den "Ausgeliehen"-Ordner geheftet! </b></li>
-
-        <li>Beim Gebrauch ist jedeR dafür verantwortlich, das Material auf Funktionstüchtigkeit zu überprüfen und
-            Mängel sofort bei den Zuständigen (Jugendreferat oder Depotverwaltung) zu melden!</li>
-
-        <li>Die Rückgabe erfolgt so schnell wie möglich und innerhalb des reservierten Zeitraums!</li>
-
-        <li>Bei der Rückgabe wird der Reservierungsausdruck umgeheftet in den Ordner "zurück".</li>
-
-        <li>Wer sich nicht an die Regeln hält, kommt auf die Schwarze Liste und kann nicht mehr ausleihen.</li>
-    </ol>
-    gez. Jugendreferat
-
-    <h1>Mit dem Login akzeptierst du die Regelungen unseres Materialdepots</h1>
-    <?php require "login/loginForm.php"; ?>
-</main>
-<?php require "global-layout/footer.php"; ?>

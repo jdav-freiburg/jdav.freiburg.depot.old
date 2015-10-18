@@ -1,17 +1,24 @@
 header {
     background-color: #192823;
-}
-header {
     color: #D0C6B1;
-}
-header,
-header img {
-    height: 85px;
 }
 header img {
     background-color: #628B61;
     float: left;
+    height: 85px;
     margin-right: 10px;
+}
+header .admin {
+    float: right;
+    margin: 10px;
+    opacity: .75;
+}
+header a {
+    color: #fff;
+}
+header h1 {
+    height: 40px;
+    margin: 0;
 }
 header h1 a {
     color: inherit;
@@ -20,13 +27,12 @@ header h1 a {
 header nav {
     background-color: #397249;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    height: 45px;
 }
 header nav ul {
     display: flex;
-    list-style: none;
 }
 header nav a {
-    color: #fff;
     display: block;
     padding: .8em .25em;
     text-decoration: none;

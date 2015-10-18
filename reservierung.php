@@ -109,7 +109,7 @@
 
 
                      <input type="submit" value="Reservierungsdaten best&auml;tigen">  </h4> </tr>
-         <tr bgcolor="#57b065"><a href="start.php">
+         <tr bgcolor="#57b065"><a href="messages.php">
                                Zur&uuml;ck zur Startseite</a></tr>
          <tr bgcolor="#57b065"><a href="hilfe.php">
                                <br>Hilfe</a></tr>

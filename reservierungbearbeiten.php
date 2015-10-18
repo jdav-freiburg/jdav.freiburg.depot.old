@@ -1,7 +1,7 @@
 <?php
  require "config.inc";
  connect();
-         // Ab hier nach jedes connect einfügen
+         // Ab hier nach jedes connect einfï¿½gen
      session_start();
      $sql="SELECT ustatus,urechte FROM $tab_user WHERE uname='$_SESSION[username]'";
            $result=mysql_query($sql) OR die("Es ist folgender Fehler aufgetreten: ".mysql_error());
@@ -25,18 +25,18 @@
 
      $tatsache = mysql_query($sql) or die("Konnte nicht schreiben");
 
- //hier werden Artikel hinzugefügt
+ //hier werden Artikel hinzugefï¿½gt
      $sql="INSERT INTO `$tab_enthaelt` ( `rnr` , `anr` )
                   VALUES (
                   '$_POST[rnr]', '$_POST[neuerartikel]'
                   )";
       $tatsache1 = mysql_query($sql) or die("Konnte nicht schreiben");
       
- //hier werden artikel gelöscht
+ //hier werden artikel gelï¿½scht
     $sql="DELETE FROM $tab_enthaelt WHERE rnr = '$_POST[rnr]' AND anr='$_POST[artikelnummer]' ";
     $tatsache2 =mysql_query ($sql) or die("Konnte nicht schreiben");
 
- //hier werden ganze Reservierungen gelöscht
+ //hier werden ganze Reservierungen gelï¿½scht
     if ($_POST[rloschen]){$sql="DELETE FROM $tab_enthaelt WHERE rnr = '$_POST[rloschen]' ";
     $tatsache3 =mysql_query ($sql) or die("Konnte nicht schreiben");
     $sql="DELETE FROM $tab_reservierung WHERE rnr = '$_POST[rloschen]' ";
@@ -55,7 +55,7 @@
      <table align="center"  width="90%" >
          <tr bgcolor="#57b065"><h1> Reservierungen bearbeiten </h1></tr>
          <tr><h1>Hier kannst du alle deine Reservierungen auf einen Blick sehen!<br>
-                 Um Sie zu bearbeiten, ändere den Inhalt der Felder und klicke auf Reservierung aktualisieren!</h1><h4>
+                 Um Sie zu bearbeiten, ï¿½ndere den Inhalt der Felder und klicke auf Reservierung aktualisieren!</h1><h4>
      </table> <form method="post">
      <table align="center"  width="80%" >
        <?php
@@ -104,7 +104,7 @@
                                                         while ($adaten=mysql_fetch_row($result)){    //Ausgabe
                                                          echo"
 
-                                                          <tr bgcolor=#FFFFFF> <td> $adaten[0]</td><td>$adaten[1]</td><td>$adaten[2] <input type=checkbox name=artikelnummer value=$adaten[0]>Löschen?</td> </tr>
+                                                          <tr bgcolor=#FFFFFF> <td> $adaten[0]</td><td>$adaten[1]</td><td>$adaten[2] <input type=checkbox name=artikelnummer value=$adaten[0]>Lï¿½schen?</td> </tr>
 
                                                           ";
                                                            }
@@ -133,8 +133,8 @@
                                    }
                              echo  //SELECT bei dem der Artikel reserviert wird
                               "
-                            <td> <h4>Neuen Artikel hinzufügen
-                            (bitte vorher links überprüfen ob die Ausrüstung frei ist)
+                            <td> <h4>Neuen Artikel hinzufï¿½gen
+                            (bitte vorher links ï¿½berprï¿½fen ob die Ausrï¿½stung frei ist)
                             <SELECT name=neuerartikel><option> ";
                                  $sql="SELECT a.anr,a.aname,a.abeschreibung
                                        FROM $tab_artikel AS a";
@@ -147,7 +147,7 @@
                            <td><form method=post>
                            <input type=hidden name=rnr value=$rdaten[rnr]>
                            <input type=hidden name=rloschen value=$rdaten[rnr]>
-                           <input type=submit value='Reservierung löschen'></td><td></td></tr></form>
+                           <input type=submit value='Reservierung lï¿½schen'></td><td></td></tr></form>
                            <tr><td><br><br><br><br></td></tr>";
                   } //ende while aller reservierungen
                       ?>
@@ -156,8 +156,8 @@
          </table>
      <table align="center"  width="90%" >
 
-         <tr bgcolor="#57b065"><a href="start.php">
-                               Zurück zur Startseite</a></tr>
+         <tr bgcolor="#57b065"><a href="messages.php">
+                               Zurï¿½ck zur Startseite</a></tr>
          <tr bgcolor="#57b065"><a href="hilfe.php">
                                Hilfe</a></tr>
      <table>

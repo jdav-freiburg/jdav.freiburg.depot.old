@@ -78,7 +78,7 @@ VALUES (
 
      </table>
      <table align="center"  width="90%" >
-         <tr bgcolor="#57b065"><a href="start.php">
+         <tr bgcolor="#57b065"><a href="messages.php">
                                Zur&uuml;ck zum Login</a></tr>
          <tr bgcolor="#57b065"><a href="hilfe.php">
                                Hilfe</a></tr>

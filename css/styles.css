@@ -1,10 +1,22 @@
 @import url("normalize.css");
 @import url("header.css");
 @import url("main.css");
-@import url("footer.css");
+@import url("login.css");
 
 /* http://www.colorcombos.com/color-scheme-420.html */
 /* http://www.colorcombos.com/color-scheme-430.html */
+
+nav ul {
+    list-style: none;
+}
+
+.log {
+    color: #DD1E2F;
+}
+
+.login {
+    float: right;
+}
 
 .reservation {
     border: 2px solid #06A2CB;

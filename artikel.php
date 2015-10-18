@@ -3,7 +3,7 @@
  connect();
  
  
-            // Ab hier nach jedes connect einfügen
+            // Ab hier nach jedes connect einfï¿½gen
      session_start();
      $sql="SELECT ustatus,urechte FROM $tab_user WHERE uname='$_SESSION[username]'";
            $result=mysql_query($sql) OR die("Es ist folgender Fehler aufgetreten: ".mysql_error());
@@ -34,14 +34,14 @@
 	<form method='post' action="speichern.php">
 
 		<div class="formHeader">
-			<h1> Ausrüstung reservieren </h1>
-			<p>Um Ausrüstung für den angegebenen Zeitraum zu reservieren, markiere die jeweiligen Ausrüstungsteile in der Spalte "Reservieren"</p>
-			Du reservierst Ausrüstung für den Zeitraum:
+			<h1> Ausrï¿½stung reservieren </h1>
+			<p>Um Ausrï¿½stung fï¿½r den angegebenen Zeitraum zu reservieren, markiere die jeweiligen Ausrï¿½stungsteile in der Spalte "Reservieren"</p>
+			Du reservierst Ausrï¿½stung fï¿½r den Zeitraum:
 			<h1>von:  <?php echo $datumvon ; ?> bis:  <?php echo $datumbis ; ?></h1>
-			<h4>für die Ausfahrt :<?php echo "$_POST[ort] ($_POST[hinweis])" ; ?></h4>
-			<a href="reservierung.php">Zurück um Daten zu ändern</a>
+			<h4>fï¿½r die Ausfahrt :<?php echo "$_POST[ort] ($_POST[hinweis])" ; ?></h4>
+			<a href="reservierung.php">Zurï¿½ck um Daten zu ï¿½ndern</a>
 			<div class="formSubmit">
-				<input type=submit value='Ausrüstung reservieren'>
+				<input type=submit value='Ausrï¿½stung reservieren'>
 			</div>
 			<input type="hidden" name="datumvon" value="<?php echo $datumvon ; ?>">
 			<input type="hidden" name="datumbis" value="<?php echo $datumbis ; ?>">
@@ -121,7 +121,7 @@
 			?>
 		</table>
 	</form>
-	<a href="start.php">Zurück zur Startseite</a>
+	<a href="messages.php">Zurï¿½ck zur Startseite</a>
 	<a href="hilfe.php">Hilfe</a>
 
   </body>
