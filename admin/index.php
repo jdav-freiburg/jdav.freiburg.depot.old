@@ -1,8 +1,8 @@
 <?php
-    require "../login/denyNoAdmin.php";
     $page_title = "Admin Bereich";
-    require "../templates/header.php";
+    require "../login/denyNoAdmin.php";
     if ($userIsAdmin) {
+        require "../templates/header.php";
 ?>
 <main>
     <nav>

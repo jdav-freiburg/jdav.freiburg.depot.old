@@ -1,4 +1,4 @@
 <?php
-    message("Du bist nicht eingeloggt.");
     require "../login/loginForm.php";
+    message("Du bist nicht eingeloggt.");
 ?>

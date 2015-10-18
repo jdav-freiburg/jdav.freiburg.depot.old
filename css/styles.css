@@ -6,6 +6,10 @@
 /* http://www.colorcombos.com/color-scheme-420.html */
 /* http://www.colorcombos.com/color-scheme-430.html */
 
+body {
+    max-width: 1200px;
+}
+
 nav ul {
     list-style: none;
 }
