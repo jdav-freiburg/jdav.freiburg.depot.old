@@ -1,0 +1,15 @@
+footer {
+    background-color: #192823;
+    color: #fff;
+    height: 50px;
+    padding: 0 1em;
+}
+footer .admin {
+    float: right;
+}
+footer a {
+    color: #fff;
+    display: inline-block;
+    padding: .8em .25em;
+    opacity: .4;
+}

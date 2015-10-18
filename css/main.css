@@ -1,0 +1,5 @@
+main {
+    height: calc(100% - 85px - 50px);
+    padding: 0 1em;
+    overflow: auto;
+}

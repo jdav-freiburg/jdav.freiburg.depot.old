@@ -17,4 +17,5 @@
             <li><a href="admin_userauswahlen.php">User verwalten</a></li>
         </ul>
     </nav>
+</main>
 <?php } require "../global-layout/footer.php"; ?>
