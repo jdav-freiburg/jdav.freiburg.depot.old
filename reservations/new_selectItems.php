@@ -1,4 +1,6 @@
 <?php
+    require "../_configs.php";
+    $CURRENT_SITE = $SITE_NEW_RESERVATION;
     $page_title = "neue Reservierung - Material auswählen";
     require "../login/denyNoLogin.php"; //FIXME deny "not-unlocked"!
     if ($loggedIn) {

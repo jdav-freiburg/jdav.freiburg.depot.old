@@ -10,8 +10,11 @@
 .reservation aside {
     float: right;
 }
-.reservation .about {
-    margin-bottom: 10px;
+.reservation .items {
+    margin: 10px 0;
+}
+.reservation .items:last-child {
+    margin-bottom: 0;
 }
 .reservation .items .count {
     min-width: 20px;

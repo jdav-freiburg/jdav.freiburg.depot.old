@@ -1,0 +1,33 @@
+.icon, [class^="icon-"] {
+    font-family: "icomoon";
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+input.icon {
+    font-size: 200%;
+    padding: 10px;
+}
+input.icon:hover {
+    background-color: #D0C6B1;
+}
+
+[class^="icon-"] {
+    font-size: 80%;
+    speak: none;
+    line-height: 1;
+}
+.icon-bin:before {
+    content: "\e800";
+}
+.icon-plus:before {
+    content: "\e801";
+}
+.icon-minus:before {
+    content: "\e802";
+}
+.icon-update:before {
+    content: "\e803";
+}
+
+

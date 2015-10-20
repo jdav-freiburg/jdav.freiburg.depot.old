@@ -34,20 +34,64 @@
             <h1><a href="<?php echo $webroot; ?>/">Depot</a></h1>
             <nav>
                 <ul>
-                    <li><a href="<?php echo $webroot; ?>/reservations">Reservierungs&uuml;bersicht</a></li>
-                    <li><a href="<?php echo $webroot; ?>/reservations/new.php">Neue Reservierung</a></li>
-                    <li><a href="<?php echo $webroot; ?>/reservations/edit.php" disabled>Reservierung bearbeiten</a></li>
-                    <li><a href="<?php echo $webroot; ?>/profil.php" disabled>Profil</a></li>
-                    <li><a href="<?php echo $webroot; ?>/statistik.php" disabled>Statistik</a></li>
-                    <li><a href="<?php echo $webroot; ?>/help">Hilfe</a></li>
+                    <?php
+                        function getActiveClass($currentSite, $link) {
+                            if ($currentSite == $link) {
+                                return "active";
+                            }
+                            return "";
+                        }
+                    ?>
+                    <li>
+                        <a href="<?php echo $webroot; ?>/reservations" class="<?php echo getActiveClass($CURRENT_SITE, $SITE_RESERVATIONS); ?>">
+                            Reservierungs&uuml;bersicht
+                        </a>
+                    </li>
+                    <li>
+                        <a href="<?php echo $webroot; ?>/reservations/new.php" class="<?php echo getActiveClass($CURRENT_SITE, $SITE_NEW_RESERVATION); ?>">
+                            Neue Reservierung
+                        </a>
+                    </li>
+                    <li>
+                        <a href="<?php echo $webroot; ?>/reservations/edit.php" class="<?php echo getActiveClass($CURRENT_SITE, $SITE_EDIT_RESERVATION); ?>">
+                            Reservierung bearbeiten
+                        </a>
+                    </li>
+                    <li>
+                        <a href="<?php echo $webroot; ?>/profil.php" disabled class="<?php echo getActiveClass($CURRENT_SITE, $SITE_PROFILE); ?>">
+                            Profil
+                        </a>
+                    </li>
+                    <li>
+                        <a href="<?php echo $webroot; ?>/statistik.php" disabled class="<?php echo getActiveClass($CURRENT_SITE, $SITE_STATISTICS); ?>">
+                            Statistik
+                        </a>
+                    </li>
+                    <li>
+                        <a href="<?php echo $webroot; ?>/help" class="<?php echo getActiveClass($CURRENT_SITE, $SITE_HELP); ?>">
+                            Hilfe
+                        </a>
+                    </li>
                     <?php
                         if ($userIsAdmin) {
-                            echo "<li><a href='$webroot/admin'>Admin</a></li>";
+                            $activeClass = getActiveClass($CURRENT_SITE, $SITE_ADMIN);
+                            echo "
+                    <li>
+                        <a href='$webroot/admin' class='$activeClass'>
+                            Admin
+                        </a>
+                    </li>";
                         }
                         if ($_SESSION['eingeloggt']) {
-                            echo "<li><a href='$webroot/logout.php'>Logout</a></li>";
+                            echo "
+                    <li>
+                        <a href='$webroot/logout.php'>
+                            Logout
+                        </a>
+                    </li>";
                         }
                     ?>
                 </ul>
             </nav>
         </header>
+        <aside class="dev-message">work in progress</aside>

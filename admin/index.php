@@ -1,4 +1,6 @@
 <?php
+    require "../_configs.php";
+    $CURRENT_SITE = $SITE_ADMIN;
     $page_title = "Admin Bereich";
     require "../login/denyNoAdmin.php";
     if ($userIsAdmin) {

@@ -18,7 +18,7 @@
     <header>
         <h1>Ausfahrt: $rdaten[rziel]<br>$rdaten[rdatumvon] - $rdaten[rdatumbis]</h1>
     </header>
-    <article class='about'>reverviert von: <a href=mailto:$rdaten[umail]>$rdaten[uname]</a>, Telefon: $rdaten[rbemerkung]</article>
+    <article>reverviert von: <a href=mailto:$rdaten[umail]>$rdaten[uname]</a>, Telefon: $rdaten[rbemerkung]</article>
     <table class='items'>
             ";
 

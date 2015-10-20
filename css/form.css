@@ -1,0 +1,25 @@
+form section {
+    margin-bottom: 10px;
+}
+form section:last-child {
+    margin-bottom: 0;
+}
+form .date {
+    max-width: 100px;
+}
+form input[type="text"],
+form select {
+    padding: .1em .2em;
+}
+form input.icon {
+    float: right;
+    margin-left: 5px;
+}
+form span[class^="icon-"] {
+    padding: .2em;
+    border: 1px solid lightgray;
+    cursor: pointer;
+}
+form select {
+    max-width: 300px;
+}

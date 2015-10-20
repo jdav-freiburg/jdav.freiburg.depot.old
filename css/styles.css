@@ -1,16 +1,21 @@
 @import url("normalize.css");
+@import url("icons.css");
 @import url("header.css");
 @import url("main.css");
 @import url("login.css");
 @import url("reservations.css");
-
-/* http://www.colorcombos.com/color-scheme-420.html */
-/* http://www.colorcombos.com/color-scheme-430.html */
+@import url("form.css");
 
 @font-face {
     font-family: "fertigo_pro";
     src: url("../media/fertigo_pro.woff2") format("woff2"),
         url("../media/fertigo_pro.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "icomoon";
+    src: url("../media/icomoon.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }
@@ -20,8 +25,21 @@
 }
 
 body {
-    font-family: "fertigo_pro", serif;
+    font-family: "Ubuntu", sans-serif;
     max-width: 1200px;
+}
+#header {
+    position: fixed;
+    width: 1200px;
+    z-index: 1;
+}
+main {
+    position: relative;
+    top: 108px;
+}
+
+h1, h2 {
+    font-family: "fertigo_pro", serif;
 }
 
 nav ul {
@@ -30,7 +48,9 @@ nav ul {
 
 .log {
     font-size: 300%;
-    margin: 10px;
+    margin-left: 10px;
+    position: relative;
+    top: 108px;
 }
 
 .error {
@@ -43,4 +63,17 @@ nav ul {
 
 .login {
     float: right;
+    margin-top: 108px;
+}
+
+.dev-message {
+    color: #DD1E2F;
+    font-size: 600%;
+    opacity: .2;
+    position: fixed;
+    bottom: 0;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }

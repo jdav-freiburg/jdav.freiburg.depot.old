@@ -22,3 +22,4 @@ _configs.php
 .idea
 *.sql
 tmp
+media/_notes

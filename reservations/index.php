@@ -1,4 +1,6 @@
 <?php
+    require "../_configs.php";
+    $CURRENT_SITE = $SITE_RESERVATIONS;
     $page_title = "alle Reservierungen";
     require "../login/denyNoLogin.php";
     if ($loggedIn) {
