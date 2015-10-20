@@ -2,7 +2,6 @@
     session_start();
     require "_configs.php";
     $page_title = "Startseite";
-    require "templates/header.php";
 
     require "utils/functions.php";
     connectDatabase($dbServer, $dbUser, $dbPassword, $dbName);
@@ -21,7 +20,7 @@
         $check = mysql_num_rows($result);
 
         if ($check < 1) {
-            $messages[] = "Der Benutzer ist nicht vorhanden.";
+            $errors[] = "Der Benutzer ist nicht vorhanden.";
         } else {
             $wert = mysql_fetch_assoc($result);
             $passwort = $wert['upw'];
@@ -29,7 +28,7 @@
     }
 
     if ($loginSubmitted and ($pass != $passwort or !isset($wert))) {
-        $messages[] = "Das Passwort ist falsch.";
+        $errors[] = "Das Passwort ist falsch.";
         session_destroy();
     } else if ($loginSubmitted) {
         $_SESSION['eingeloggt'] = TRUE;
@@ -37,11 +36,13 @@
         $_SESSION['userrechte'] = $wert['urechte'];
     }
 
+    require "templates/header.php";
+
     if (!$_SESSION['eingeloggt']) {
         require "login/loginForm.php";
     }
 
-    message($messages);
+    showError($errors);
 
     require "templates/rules.php";
     require "templates/footer.php";

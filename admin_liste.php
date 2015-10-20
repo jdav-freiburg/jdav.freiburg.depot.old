@@ -1,7 +1,7 @@
 <?php
  require "config.inc";
  connect();
-  // Ab hier nach jedes connect einfügen (auf admin seiten)
+  // Ab hier nach jedes connect einfï¿½gen (auf admin seiten)
      session_start();
      $sql="SELECT ustatus,urechte FROM $tab_user WHERE uname='$_SESSION[username]'";
            $result=mysql_query($sql) OR die("Es ist folgender Fehler aufgetreten: ".mysql_error());
@@ -26,9 +26,9 @@
   <body>
 
      <table align="center"  width="90%" >
-         <tr bgcolor="#57b065"><h1> Ausrüstungsliste </h1></tr>
-         <tr><h1>Diese aktuelle Ausrüstungsliste sollte in regelmäßigen Abständen ausgedruckt
-                 werden und im Jugend-Depot ausgehängt werden.</h1><h4>
+         <tr bgcolor="#57b065"><h1> Ausrï¿½stungsliste </h1></tr>
+         <tr><h1>Diese aktuelle Ausrï¿½stungsliste sollte in regelmï¿½ï¿½igen Abstï¿½nden ausgedruckt
+                 werden und im Jugend-Depot ausgehï¿½ngt werden.</h1><h4>
      </table>
      <table align="center"  width="90%" >
                       <?php
@@ -75,8 +75,8 @@
          </table>
      <table align="center"  width="90%" >
          <tr bgcolor="#57b065"><a href="admin.php">
-                               Zurück zur Adminpage</a></tr>
-         <tr bgcolor="#57b065"><a href="hilfe.php">
+                               Zurï¿½ck zur Adminpage</a></tr>
+         <tr bgcolor="#57b065"><a href="help/index.php">
                                Hilfe</a></tr>
      <table>
 

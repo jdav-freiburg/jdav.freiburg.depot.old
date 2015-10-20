@@ -54,7 +54,7 @@
                       </h4> <table align="center"  width="40%" >
          <tr bgcolor="#57b065"><a href="admin.php">
                                Zur&uuml;ck zur Adminpage</a></tr>
-         <tr bgcolor="#57b065"><a href="hilfe.php">
+         <tr bgcolor="#57b065"><a href="help/index.php">
                                <br>Hilfe</a></tr>
      </table>
 

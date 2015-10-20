@@ -1,0 +1,24 @@
+.reservation {
+    border: 2px solid #06A2CB;
+    margin: 10px;
+    padding: 5px;
+    width: 600px;
+}
+.reservation h1 {
+    font-size: 140%;
+}
+.reservation aside {
+    float: right;
+}
+.reservation .about {
+    margin-bottom: 10px;
+}
+.reservation .items .count {
+    min-width: 20px;
+    padding-right: 10px;
+    text-align: right;
+}
+.reservation aside,
+.reservation .description {
+    opacity: .5;
+}

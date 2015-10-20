@@ -1,11 +1,11 @@
 <section class="login">
     <form method="post" action="<?php echo $webroot; ?>/">
         <section>
-            <legend>Benutzer</legend>
+            <label>Benutzer</label>
             <input name="lusername" required autofocus/>
         </section>
         <section>
-            <legend>Passwort</legend>
+            <label>Passwort</label>
             <input name="lpw" type="password" required/>
         </section>
         <section class="register">

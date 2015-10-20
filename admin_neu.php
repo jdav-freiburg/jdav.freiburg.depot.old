@@ -1,7 +1,7 @@
 <?php
  require "config.inc";
  connect();
-          // Ab hier nach jedes connect einfügen (auf admin seiten)
+          // Ab hier nach jedes connect einfï¿½gen (auf admin seiten)
      session_start();
      $sql="SELECT ustatus,urechte FROM $tab_user WHERE uname='$_SESSION[username]'";
            $result=mysql_query($sql) OR die("Es ist folgender Fehler aufgetreten: ".mysql_error());
@@ -17,11 +17,11 @@
      // bis hier
  
  
-     /*if(isset($_POST['loschen'])) { //Artikel löschen
+     /*if(isset($_POST['loschen'])) { //Artikel lï¿½schen
           $sql = "DELETE FROM $tab_artikel WHERE anr = $_POST[anr]";
           $result = mysql_query($sql);
              if ($result)
-                           {echo "<table align='center'  width=90% ><h2>Artikel Nr. $_POST[anr] wurde gelöscht </h2></table>";
+                           {echo "<table align='center'  width=90% ><h2>Artikel Nr. $_POST[anr] wurde gelï¿½scht </h2></table>";
                            }
           } */
      if (isset($_POST['neu'])){    //Artikel neu
@@ -33,18 +33,18 @@
                    VALUES ( '$_POST[anr]', '$_POST[aname]', '$_POST[abeschreibung]'
                              ,'$_POST[agruppe]')";
            $result = mysql_query($sql);
-             if ($result) {echo "<table align=center  width=90% ><h2>Artikel Nr. $_POST[anr] wurde hinzugefügt </h2></table>";
+             if ($result) {echo "<table align=center  width=90% ><h2>Artikel Nr. $_POST[anr] wurde hinzugefï¿½gt </h2></table>";
 
                            }
 
      }
      
-     if (isset($_POST['alter'])) {    // Artikel ändern
+     if (isset($_POST['alter'])) {    // Artikel ï¿½ndern
             $sql = " UPDATE `$tab_artikel`
             SET `aname` = '$_POST[aname]',`abeschreibung` = '$_POST[abesch]',`astatus` = '$_POST[astatus]'
             WHERE `Anr` = '$_POST[anr]' ";
             $result = mysql_query($sql);
-             if ($result) {echo "<table align=center  width=90% ><h2>Artikel Nr. $_POST[anr] wurde geändert </h2></table>";
+             if ($result) {echo "<table align=center  width=90% ><h2>Artikel Nr. $_POST[anr] wurde geï¿½ndert </h2></table>";
 
                            }
      }
@@ -60,11 +60,11 @@
 
      <table align="center"  width="90%" >
          <tr bgcolor="#57b065"><h1> Artikelverwaltung </h1></tr>
-         <tr><h1>Hier kannst du Artikel hinzufügen</h1><h4>
+         <tr><h1>Hier kannst du Artikel hinzufï¿½gen</h1><h4>
      </table>
 
      <table align="center"  width="90%" >
-        <tr bgcolor="#57b065"><h1>Neuen Artikel einfügen:</tr>
+        <tr bgcolor="#57b065"><h1>Neuen Artikel einfï¿½gen:</tr>
          <tr bgcolor="FFFFFF">
             <form method="post">
                <h4>
@@ -97,19 +97,19 @@
                    <option> Steigeisen </option>
                    <option> Schrauben </option>
                    <option> Zelte, Kocher </option>
-                   <option > Biwaksäcke </option>
-                   <option> Führer, Karten</option>
-                   <option> Spiel- und  Liederbücher </option>
+                   <option > Biwaksï¿½cke </option>
+                   <option> Fï¿½hrer, Karten</option>
+                   <option> Spiel- und  Liederbï¿½cher </option>
                    <option> Sonstiges </option>
                                   </select>
                   Artikel Gruppe    <br>
                   <input type=hidden name="neu" value="1">
-                  <input type=submit value="Hinzufügen">
+                  <input type=submit value="Hinzufï¿½gen">
             </form>
          </tr>
          <tr bgcolor="#57b065"><a href="admin.php">
-                               Zurück zur Adminpage</a></tr>
-         <tr bgcolor="#57b065"><a href="hilfe.php">
+                               Zurï¿½ck zur Adminpage</a></tr>
+         <tr bgcolor="#57b065"><a href="help/index.php">
                                Hilfe</a></tr>
      <table>
 

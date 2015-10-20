@@ -9,7 +9,7 @@
    <form method="post" action="admin_userbearbeiten.php">
      <table align="center"  width="40%" >
          <tr bgcolor="#57b065"><h1> User bearbeiten</h1></tr>
-         <tr><h1>Um Userdaten zu verändern, wähle bitte den zu bearbeitenden User aus!</h1><h4>
+         <tr><h1>Um Userdaten zu verï¿½ndern, wï¿½hle bitte den zu bearbeitenden User aus!</h1><h4>
                      <SELECT name="username" size=1>
                       <?php
                           require "config.inc";
@@ -42,12 +42,12 @@
                       ?>
                      </SELECT>
 
-                     <input type="submit" value="User löschen">  </h4>
+                     <input type="submit" value="User lï¿½schen">  </h4>
 
                       </tr>
          <tr bgcolor="#57b065"><a href="admin.php">
-                               Zurück zur Adminpage</a></tr>
-         <tr bgcolor="#57b065"><a href="hilfe.php">
+                               Zurï¿½ck zur Adminpage</a></tr>
+         <tr bgcolor="#57b065"><a href="help/index.php">
                                <br>Hilfe</a></tr>
      <table>
    </form>

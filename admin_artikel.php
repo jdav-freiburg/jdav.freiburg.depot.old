@@ -4,7 +4,7 @@
 
  connect();
 
-          // Ab hier nach jedes connect einfügen (auf admin seiten)
+          // Ab hier nach jedes connect einfï¿½gen (auf admin seiten)
 
      session_start();
 
@@ -36,7 +36,7 @@
 
  
 
-     /*if(isset($_POST['loschen'])) { //Artikel löschen
+     /*if(isset($_POST['loschen'])) { //Artikel lï¿½schen
 
           $sql = "DELETE FROM $tab_artikel WHERE anr = $_POST['loschen']";
 
@@ -44,7 +44,7 @@
 
              if ($result)
 
-                           {echo "<table align='center'  width=90% ><h2>Artikel Nr. $_POST[anr] wurde gelöscht </h2></table>";
+                           {echo "<table align='center'  width=90% ><h2>Artikel Nr. $_POST[anr] wurde gelï¿½scht </h2></table>";
 
                            }
 
@@ -68,7 +68,7 @@
 
            $result = mysql_query($sql);
 
-             if ($result) {echo "<table align=center  width=90% ><h2>Artikel Nr. $_POST[anr] wurde hinzugefügt </h2></table>";
+             if ($result) {echo "<table align=center  width=90% ><h2>Artikel Nr. $_POST[anr] wurde hinzugefï¿½gt </h2></table>";
 
 
 
@@ -80,7 +80,7 @@
 
      
 
-     if (isset($_POST['alter'])) {    // Artikel ändern
+     if (isset($_POST['alter'])) {    // Artikel ï¿½ndern
 
             $sql = " UPDATE `$tab_artikel`
 
@@ -90,7 +90,7 @@
 
             $result = mysql_query($sql);
 
-             if ($result) {echo "<table align=center  width=90% ><h2>Artikel Nr. $_POST[anr] wurde geändert </h2></table>";
+             if ($result) {echo "<table align=center  width=90% ><h2>Artikel Nr. $_POST[anr] wurde geï¿½ndert </h2></table>";
 
 
 
@@ -122,7 +122,7 @@
 
          <tr bgcolor="#57b065"><h1> Artikelverwaltung </h1></tr>
 
-         <tr><h1>Hier kannst du Artikel ändern und hinzufügen</h1><h4>
+         <tr><h1>Hier kannst du Artikel ï¿½ndern und hinzufï¿½gen</h1><h4>
 
      </table>
 
@@ -215,7 +215,7 @@
 
                                                            <input type=hidden name='alter' value='1'>
 
-                                                           <input type=submit value='Ändern'>
+                                                           <input type=submit value='ï¿½ndern'>
 
 
 
@@ -240,7 +240,7 @@
 
      <table align="center"  width="90%" >
 
-        <tr bgcolor="#57b065"><h1>Neuen Artikel einfügen:</tr>
+        <tr bgcolor="#57b065"><h1>Neuen Artikel einfï¿½gen:</tr>
 
          <tr bgcolor="FFFFFF">
 
@@ -286,7 +286,7 @@
 
                    <option> Zelt
 
-                   <option> Bücher
+                   <option> Bï¿½cher
 
                    <option> Sonstiges                  </select>
 
@@ -294,7 +294,7 @@
 
                   <input type=hidden name="neu" value="1">
 
-                  <input type=submit value="Hinzufügen">
+                  <input type=submit value="Hinzufï¿½gen">
 
             </form>
 
@@ -302,9 +302,9 @@
 
          <tr bgcolor="#57b065"><a href="admin.php">
 
-                               Zurück zur Adminpage</a></tr>
+                               Zurï¿½ck zur Adminpage</a></tr>
 
-         <tr bgcolor="#57b065"><a href="hilfe.php">
+         <tr bgcolor="#57b065"><a href="help/index.php">
 
                                Hilfe</a></tr>
 

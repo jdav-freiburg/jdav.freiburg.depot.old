@@ -4,7 +4,7 @@
         FROM $tab_user AS u, $tab_reservierung AS r
         WHERE r.unr = u.unr
         $sql_untilDateCheck
-        ORDER BY r.rdatumvon DESC
+        ORDER BY r.rdatumvon
         ";
     $resultat = mysql_query($sql);
 
@@ -14,32 +14,21 @@
 
         echo "
 <section class='reservation'>
-    <table class='about'>
-        <tr>
-            <td class='name'>Username: <a href=mailto:$rdaten[umail]>$rdaten[uname]</a></td>
-            <td class='description'>Reservierungsnummer: $rdaten[rnr]</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>von: $rdaten[rdatumvon]</td>
-            <td>bis: $rdaten[rdatumbis]</td>
-            <td>Ausfahrt: $rdaten[rziel]</td>
-        </tr>
-        <tr>
-            <td>Gruppe: $rdaten[ugruppe]</td>
-            <td class='description'>Ausgabe durch: $rdaten[uschlussel]</td>
-            <td>Telnr: $rdaten[rbemerkung]</td>
-        </tr>
-    </table>
+    <aside>$rdaten[rnr]</aside>
+    <header>
+        <h1>Ausfahrt: $rdaten[rziel]<br>$rdaten[rdatumvon] - $rdaten[rdatumbis]</h1>
+    </header>
+    <article class='about'>reverviert von: <a href=mailto:$rdaten[umail]>$rdaten[uname]</a>, Telefon: $rdaten[rbemerkung]</article>
     <table class='items'>
             ";
 
         $sql = "
-            SELECT a.anr, a.aname, a.abeschreibung, a.agruppe, a.astatus
+            SELECT count(*), a.aname, a.abeschreibung
             FROM $tab_artikel AS a, $tab_enthaelt AS e
             WHERE e.rnr = '$rdaten[rnr]'
             AND e.anr = a.anr
-            ORDER BY a.anr
+            GROUP BY a.aname, a.abeschreibung
+            ORDER BY a.aname, a.abeschreibung
             ";
         $result = mysql_query($sql);
 
@@ -47,10 +36,8 @@
 
             echo "
         <tr>
-            <td class='id'>$adaten[0]</td>
-            <td class='name'>$adaten[1]</td>
-            <td class='description'>$adaten[2]</td>
-            <td>($adaten[4])</td>
+            <td class='count'>$adaten[0]</td>
+            <td>$adaten[1] <span class='description'>($adaten[2])</span></td>
         </tr>
             ";
 

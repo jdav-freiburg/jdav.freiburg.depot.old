@@ -13,24 +13,36 @@
 
     function userIsAdmin($user) {
         if (!$_SESSION['eingeloggt'] or $user['urechte'] != 1) {
-            require "../error/not-logged-in.php";
             return FALSE;
         } else {
             return TRUE;
         }
     }
 
-    function message($log) {
+    function showError($log) {
         if ($log) {
             if (is_array($log)) {
                 for ($i = 0; $i < count($log); $i++) {
-                    echo "<aside class='log'>$log[$i]</aside>";
+                    echo "<aside class='log error'>$log[$i]</aside>";
                 }
             } else {
-                echo "<aside class='log'>$log</aside>";
+                echo "<aside class='log error'>$log</aside>";
             }
         }
     }
+
+    function showInfo($log) {
+        if ($log) {
+            if (is_array($log)) {
+                for ($i = 0; $i < count($log); $i++) {
+                    echo "<aside class='log info'>$log[$i]</aside>";
+                }
+            } else {
+                echo "<aside class='log info'>$log</aside>";
+            }
+        }
+    }
+
 
     function js_console($log) {
         if ($log) {

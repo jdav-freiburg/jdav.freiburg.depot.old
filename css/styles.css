@@ -2,11 +2,25 @@
 @import url("header.css");
 @import url("main.css");
 @import url("login.css");
+@import url("reservations.css");
 
 /* http://www.colorcombos.com/color-scheme-420.html */
 /* http://www.colorcombos.com/color-scheme-430.html */
 
+@font-face {
+    font-family: "fertigo_pro";
+    src: url("../media/fertigo_pro.woff2") format("woff2"),
+        url("../media/fertigo_pro.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+*[disabled] { /*FIXME remove this when not needed anymore*/
+    opacity: .2;
+}
+
 body {
+    font-family: "fertigo_pro", serif;
     max-width: 1200px;
 }
 
@@ -15,34 +29,18 @@ nav ul {
 }
 
 .log {
+    font-size: 300%;
+    margin: 10px;
+}
+
+.error {
     color: #DD1E2F;
+}
+
+.info {
+    color: #509651;
 }
 
 .login {
     float: right;
-}
-
-.reservation {
-    border: 2px solid #06A2CB;
-    margin: 10px 2.5%;
-    padding: 5px;
-    width: 800px;
-}
-.reservation .about {
-    margin-bottom: 10px;
-}
-.reservation .about .name {
-    width: 250px;
-}
-.reservation .about .description {
-    width: 200px;
-}
-.reservation .items .id {
-    width: 40px;
-}
-.reservation .items .name {
-    width: 209px;
-}
-.reservation .items .description {
-    width: 480px;
 }

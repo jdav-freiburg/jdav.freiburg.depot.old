@@ -158,7 +158,7 @@
 
          <tr bgcolor="#57b065"><a href="messages.php">
                                Zur�ck zur Startseite</a></tr>
-         <tr bgcolor="#57b065"><a href="hilfe.php">
+         <tr bgcolor="#57b065"><a href="help/index.php">
                                Hilfe</a></tr>
      <table>
 
