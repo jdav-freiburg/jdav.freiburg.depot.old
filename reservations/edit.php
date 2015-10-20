@@ -4,7 +4,7 @@
     $page_title = "Reservierung bearbeiten";
     require "../login/denyNoLogin.php";
     if ($loggedIn) {
-    require "../templates/header.php";
+    require "../_templates/header.php";
 
     // hier wird der Reservierungskopf erneuert
     $sql = "UPDATE $tab_reservierung
@@ -123,4 +123,4 @@
         }
     ?>
 </main>
-<?php } require "../templates/footer.php"; ?>
+<?php } require "../_templates/footer.php"; ?>

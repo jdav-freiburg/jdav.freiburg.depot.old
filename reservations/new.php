@@ -4,7 +4,7 @@
     $page_title = "neue Reservierung";
     require "../login/denyNoLogin.php"; //FIXME deny "not-unlocked"!
     if ($loggedIn) {
-        require "../templates/header.php";
+        require "../_templates/header.php";
 ?>
 <main>
     <form method="post" action="<?php echo $webroot; ?>/reservations/new_selectItems.php">
@@ -91,4 +91,4 @@
         </section>
     </form>
 </main>
-<?php } require "../templates/footer.php"; ?>
+<?php } require "../_templates/footer.php"; ?>

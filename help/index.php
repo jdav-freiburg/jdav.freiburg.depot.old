@@ -2,7 +2,7 @@
     require "../login/startSession.php";
     $CURRENT_SITE = $SITE_HELP;
     $page_title = "Hilfe & FAQ";
-    require "../templates/header.php";
+    require "../_templates/header.php";
     if (!$_SESSION['eingeloggt']) {
         require "../login/loginForm.php";
     }
@@ -53,4 +53,4 @@
         löschen.
     </article>
 </main>
-<?php require "../templates/footer.php"; ?>
+<?php require "../_templates/footer.php"; ?>

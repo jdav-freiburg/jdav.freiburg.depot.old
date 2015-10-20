@@ -1,6 +1,6 @@
 <?php
     require "../_configs.php";
-    require "../utils/functions.php";
+    require "../_utils/functions.php";
     session_start();
     $loggedIn = $_SESSION['eingeloggt'];
     connectDatabase($dbServer, $dbUser, $dbPassword, $dbName);

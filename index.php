@@ -3,7 +3,7 @@
     require "_configs.php";
     $page_title = "Startseite";
 
-    require "utils/functions.php";
+    require "_utils/functions.php";
     connectDatabase($dbServer, $dbUser, $dbPassword, $dbName);
 
     $loginSubmitted = $_POST["lusername"];
@@ -36,7 +36,7 @@
         $_SESSION['userrechte'] = $wert['urechte'];
     }
 
-    require "templates/header.php";
+    require "_templates/header.php";
 
     if (!$_SESSION['eingeloggt']) {
         require "login/loginForm.php";
@@ -44,6 +44,6 @@
 
     showError($errors);
 
-    require "templates/rules.php";
-    require "templates/footer.php";
+    require "_templates/rules.php";
+    require "_templates/footer.php";
 ?>

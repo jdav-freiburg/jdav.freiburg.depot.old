@@ -4,7 +4,7 @@
     $page_title = "neue Reservierung angelegt";
     require "../login/denyNoLogin.php"; //FIXME deny "not-unlocked"!
     if ($loggedIn) {
-        require "../templates/header.php";
+        require "../_templates/header.php";
 
         //Reservierung neu
         $sql= "
@@ -95,5 +95,5 @@
             mail($email_admin, "Neue Reservierung", $text);
         }
     }
-    require "../templates/footer.php";
+    require "../_templates/footer.php";
 ?>

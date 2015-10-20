@@ -6,7 +6,7 @@
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"/>
 
-        <link rel="stylesheet" type="text/css" href="<?php echo $webroot; ?>/css/styles.css" media="all">
+        <link rel="stylesheet" type="text/css" href="<?php echo $webroot; ?>/_css/styles.css" media="all">
 
         <?php #Google Fonts embed code ?>
         <script type="text/javascript">
@@ -29,7 +29,7 @@
                 Mail an den Admin: <?php echo "<a href='mailto:$email_admin'>$email_admin</a>"; ?>
             </section>
             <a href="http://www.jdav-freiburg.de">
-                <img src="<?php echo $webroot; ?>/media/logo.jdav.freiburg.png" alt="Logo des JDAV Freiburg" />
+                <img src="<?php echo $webroot; ?>/_media/logo.jdav.freiburg.png" alt="Logo des JDAV Freiburg" />
             </a>
             <h1><a href="<?php echo $webroot; ?>/">Depot</a></h1>
             <nav>

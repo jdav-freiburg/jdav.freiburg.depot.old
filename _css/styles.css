@@ -8,14 +8,14 @@
 
 @font-face {
     font-family: "fertigo_pro";
-    src: url("../media/fertigo_pro.woff2") format("woff2"),
-        url("../media/fertigo_pro.woff") format("woff");
+    src: url("../_media/fertigo_pro.woff2") format("woff2"),
+        url("../_media/fertigo_pro.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: "icomoon";
-    src: url("../media/icomoon.woff") format("woff");
+    src: url("../_media/icomoon.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }

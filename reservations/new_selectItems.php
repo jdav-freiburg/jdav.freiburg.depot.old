@@ -4,7 +4,7 @@
     $page_title = "neue Reservierung - Material auswählen";
     require "../login/denyNoLogin.php"; //FIXME deny "not-unlocked"!
     if ($loggedIn) {
-        require "../templates/header.php";
+        require "../_templates/header.php";
 
         $datumvon = "$_POST[jahrvon]-$_POST[monatvon]-$_POST[tagvon]";
         $datumbis = "$_POST[jahrbis]-$_POST[monatbis]-$_POST[tagbis]";
@@ -87,4 +87,4 @@
         </table>
     </form>
 </main>
-<?php } require "../templates/footer.php"; ?>
+<?php } require "../_templates/footer.php"; ?>

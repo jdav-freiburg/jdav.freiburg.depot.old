@@ -4,7 +4,7 @@
     $page_title = "Admin Bereich";
     require "../login/denyNoAdmin.php";
     if ($userIsAdmin) {
-        require "../templates/header.php";
+        require "../_templates/header.php";
 ?>
 <main>
     <nav>
@@ -18,4 +18,4 @@
         </ul>
     </nav>
 </main>
-<?php } require "../templates/footer.php"; ?>
+<?php } require "../_templates/footer.php"; ?>
